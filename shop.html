@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Покупки | Creatium</title>
+  <link rel="icon" type="image/png" href="creatium-logo.png">
+  <link rel="stylesheet" href="public/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <h1>Магазин Creatium</h1>
+    <p class="subtitle">Выберите подходящий вариант поддержки сервера или восстановления доступа</p>
+    <a href="index.html" class="cta-btn" style="margin-top:24px;">← На главную</a>
+  </header>
+  <main>
+    <section class="donate" style="max-width: 800px; margin: 40px auto 0 auto;">
+      <h2>Доступные покупки</h2>
+      <div class="donate-options">
+        <div class="donate-card">
+          <h3>1 сезон</h3>
+          <p class="price">99 ₽</p>
+          <a href="#" class="donate-btn">Купить</a>
+          <button class="donate-more-btn">Подробнее</button>
+          <div class="donate-details">
+            <p>Покупая проходку на 1 сезон, вы получаете доступ ко всем возможностям сервера на текущий сезон.<br>Включает: ивенты, бонусы, поддержку проекта и многое другое!</p>
+          </div>
+        </div>
+        <div class="donate-card">
+          <h3>Навсегда</h3>
+          <p class="price">179 ₽</p>
+          <a href="#" class="donate-btn">Купить</a>
+          <button class="donate-more-btn">Подробнее</button>
+          <div class="donate-details">
+            <p>Тоже самое что и 1 сезон, но покупая вы получаете проходку на все сезоны!</p>
+          </div>
+        </div>
+        <div class="donate-card">
+          <h3>Разбан</h3>
+          <p class="price">199 ₽</p>
+          <a href="#" class="donate-btn">Купить</a>
+          <button class="donate-more-btn">Подробнее</button>
+          <div class="donate-details">
+            <p>Разбан аккаунта на сервере.<br>Включает: снятие всех блокировок, восстановление доступа к серверу относительно вашей проходки.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <p>© Creatium, 2025. Все права защищены. Неофициальный проект Minecraft.</p>
+  </footer>
+  <script>
+    document.querySelectorAll('.donate-more-btn').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        const details = this.nextElementSibling;
+        details.classList.toggle('open');
+        this.textContent = details.classList.contains('open') ? 'Скрыть' : 'Подробнее';
+      });
+    });
+  </script>
+</body>
+</html> 
